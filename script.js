@@ -2,7 +2,7 @@
     let urlParams = new URLSearchParams(window.location.search);
     let user = urlParams.get("username");
     let infoBlock = document.getElementById('info');
-    fetch(`https://api.github.com/users/OtoSigen`)
+    fetch(`https://api.github.com/users/${user}`)
     .then(res=>res.json())
     .then(data=>{
 
