@@ -7,17 +7,17 @@
     .then(data=>{
 
         if(data.message !=="Not Found"){
-            // Логин
+           
             let HTMLuser = document.createElement('a');
             HTMLuser.innerHTML = data.login;
             HTMLuser.setAttribute('href', data.html_url)
             console.log(data);
             infoBlock.appendChild(HTMLuser);
-            // Информация о аккаунте
+            
             let HTMLbio= document.createElement('p');
             HTMLbio.innerHTML = data.bio;
             infoBlock.appendChild(HTMLbio);
-            //Аватарка
+            
             let HTMLavatar = document.createElement('img');
             HTMLavatar.setAttribute('src', data.avatar_url);
             HTMLavatar.setAttribute('alt', `Аватарка пользователя ${data.login}`);
@@ -30,6 +30,5 @@
         }
     })
     .catch((err)=>{
-        console.log(err);
-    })
+        })
 })(); 
